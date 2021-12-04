@@ -94,6 +94,33 @@
          };
 
          getday();
+
+      
+        const d=document.getElementById('Date');
+        // const m=document.getElementById('month');
+        const Datecur=()=>{
+            var month= new Array(12);
+            month[0]="Jan";
+            month[1]="Feb";
+            month[2]="Mar";
+            month[3]="Apr";
+            month[4]="May";
+            month[5]="Jun";
+            month[6]="Jul";
+            month[7]="Aug";
+            month[8]="Sep";
+            month[9]="Oct";
+            month[10]="Nov";
+            month[11]="Dec";
+            var time= new Date();
+            var months=month[time.getMonth()];
+            var day=time.getDate();
+
+            d.innerText=`${day} ${months}`;
+            // m.innerText=months;
+
+        }
+        Datecur();   
     </script>
 </body>
 </html>
